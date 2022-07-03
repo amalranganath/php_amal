@@ -25,7 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'email:email',
             'telephone',
             'route',
-            'joined_date',
+            [
+                'attribute' => 'joined_date',
+                'value' => function ($model, $key) { 
+                    return date("d M Y", strtotime($model->joined_date));
+                },
+            ],
             'comment:ntext',
         ],
     ])

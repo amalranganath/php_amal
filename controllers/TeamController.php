@@ -67,7 +67,8 @@ class TeamController extends Controller {
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                \Yii::$app->session->setFlash('success', "Sales Representative Created!");
+                return $this->redirect(["index"]);
             }
         } else {
             $model->loadDefaultValues();
@@ -89,7 +90,8 @@ class TeamController extends Controller {
         $model = $this->findModel($id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            \Yii::$app->session->setFlash('success', "Sales Representative Updated!");
+            return $this->redirect(["index"]);
         }
 
         return $this->render('update', [
