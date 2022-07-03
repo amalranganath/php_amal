@@ -1,0 +1,86 @@
+/* Custome style go here */
+
+body{
+    font-family: Arial, sans-serif;
+}
+h2 {
+    font-size: 1.5rem;  font-weight: 600;
+}
+
+main > .container {
+    padding: 80px 15px 20px;
+}
+.table-sm .form-control {
+    height: calc(1.5em + 0.5rem + 2px);
+    line-height: 1.5;
+}
+.modal-content {
+    background: #fafafa;
+}
+.modal-body{
+    padding: 1.5rem; 
+}
+.footer {
+    background-color: #e1e1e1;
+    font-size: .9em;
+    height: 60px;
+    border-top: 1px solid #cccccc; 
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.grid-view th {
+    /*white-space: nowrap;*/
+}
+.grid-view td a {
+    margin-right: 10px
+}
+.grid-view th a {
+    color: #32383e
+}
+.hint-block {
+    display: block;
+    margin: 5px 0;
+    color: #999;
+}
+.sales-team form .required label:after{
+    content: " *";
+    color: #dc3545
+}
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+
+/* align the logout "link" (button in form) of the navbar */
+.navbar { border-bottom: 2px solid #10707f }
+.nav li > form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
